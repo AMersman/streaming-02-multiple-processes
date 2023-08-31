@@ -5,3 +5,40 @@ This will clear the console output.
 Run the file once while the tasks are short. 
 
 Copy and paste the terminal results (when task_duration is 0) here.
+
+---
+(.venv) (base) Ashleys-MBP:streaming-02-multiple-processes ashleymersman$ /Users/ashleymersman/Desktop/Streaming/streaming-02-multiple-processes/.venv/bin/python /Users/ashleymersman/Desktop/Streaming/streaming-02-multiple-processes/multiple_processes.py
+2023-08-31 15:10:33,482 - INFO - 
+======================================================================
+STARTING UP.............................
+  Date and Time:    2023-08-31 at 03:10 PM
+  Operating System: posix Darwin 19.6.0
+  Python Version:   3.11.4
+  Path to Interpreter:  /Users/ashleymersman/Desktop/Streaming/streaming-02-multiple-processes/.venv/bin/python
+======================================================================
+
+2023-08-31 15:10:33,483 - INFO - Called recreate_database().
+2023-08-31 15:10:33,483 - INFO - Called drop_table().
+2023-08-31 15:10:33,491 - INFO - Table 'pets' dropped successfully.
+2023-08-31 15:10:33,491 - INFO - Called create_table().
+2023-08-31 15:10:33,494 - INFO - Table 'pets' created successfully.
+2023-08-31 15:10:33,589 - INFO - Called process_one().
+2023-08-31 15:10:33,589 - INFO -   Called insert_pet() with process=P1, name=Ace, breed=Dog.
+2023-08-31 15:10:33,589 - INFO - Called process_two().
+2023-08-31 15:10:33,589 - INFO -   Called insert_pet() with process=P2, name=Cooper, breed=Rabbit.
+2023-08-31 15:10:33,591 - INFO -   Called insert_pet() with process=P1, name=Buddy, breed=Dog.
+2023-08-31 15:10:33,595 - INFO -   Called insert_pet() with process=P2, name=Dingo, breed=Dog.
+2023-08-31 15:10:33,596 - INFO - Called process_three().
+2023-08-31 15:10:33,596 - INFO -   Called insert_pet() with process=P3, name=Emma, breed=Rabbit.
+2023-08-31 15:10:33,598 - INFO -   Called insert_pet() with process=P3, name=Felix, breed=Cat.
+2023-08-31 15:10:33,614 - INFO - 
+SUCCESS: All processes successfully completed!
+
+Now - increase the task duration (representing 
+      the time the task has the database 
+      tied up during an insert statement).
+How well do multiple, concurrent processes share a database 
+    when each task takes more time? 
+How can multiple processes share a resource
+    without interfering with each other?
+---
